@@ -1,0 +1,41 @@
+{
+  "name": "hktr92/interview-homework-form",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "blackmirror",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "twig/twig": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/App",
+      "AppUnitTest\\": "tests/unit"
+    }
+  },
+  "require-dev": {
+    "vimeo/psalm": "^4.10",
+    "phpunit/phpunit": "^9.5",
+    "psalm/plugin-phpunit": "^0.16.1",
+    "symfony/dom-crawler": "^5.3",
+    "symfony/css-selector": "^5.3"
+  },
+  "scripts": {
+    "psalm": [
+      "@php vendor/bin/psalm --no-cache --no-progress"
+    ],
+    "phpunit": [
+      "@php vendor/bin/phpunit tests"
+    ],
+    "test": [
+      "@psalm",
+      "@phpunit"
+    ]
+  }
+}
